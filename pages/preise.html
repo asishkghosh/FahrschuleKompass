@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preisliste – Fahrschule Kompass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/logo-black.webp" type="image/webp">
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition duration-200">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-6 md:h-8 w-auto">
+                    <span class="text-lg md:text-xl font-bold text-navbar hidden sm:block">FAHRSCHULE KOMPASS</span>
+                    <span class="text-sm font-bold text-navbar sm:hidden">FAHRSCHULE KOMPASS</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Unser Angebot</a>
+                    <a href="./preise.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Infos</a>
+                    <a href="./angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Anfahrt</a>
+                </nav>
+                
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none p-2">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Unser Angebot</a>
+                    <a href="./preise.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Infos</a>
+                    <a href="./angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Anfahrt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div class="pt-24 md:pt-32"></div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-accent/10 to-accent/5 py-12 md:py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Preisliste</h1>
+            <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-4">Hier findest du alle Kosten und Gebühren für deine Fahrausbildung bei Fahrschule Kompass. Alle Preise inkl. gesetzl. MwSt.</p>
+        </div>
+    </section>
+
+    <!-- Important Notice -->
+    <section class="py-4">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-card border border-red-200 rounded-xl shadow-sm overflow-hidden">
+                <div class="px-6 py-4 bg-red-50">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i class="fas fa-exclamation-triangle text-red-500 text-lg"></i>
+                        <h3 class="text-xl font-bold text-red-800">Wichtiger Hinweis</h3>
+                    </div>
+                    <div class="p-4 border-t border-red-200 bg-red-50" id="pricing-notice">
+                        <p class="text-red-700">Alle genannten Preise dienen nur zur Orientierung und können variieren. Für die aktuell gültigen Preise und Angebote wende dich bitte direkt an die Fahrschule Kompass.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Pricing Sections -->
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- PKW & Anhängerführerschein -->
+            <div class="mb-8" data-pricing-section="pkwAnhanger">
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-4 flex-wrap">
+                                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                                    <span class="text-2xl mr-3">🚗</span>
+                                    PKW & Anhängerführerschein
+                                </h3>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B96 / BE</span>
+                            </div>
+                            <span class="pricing-icon text-2xl text-accent">−</span>
+                        </div>
+                    </button>
+                    <div class="pricing-content">
+                        <div class="p-6 border-t border-gray-200">
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                    <p class="text-sm text-gray-600 mt-2 pt-2 border-t border-accent/20"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PKW Führerschein -->
+            <div class="mb-8" data-pricing-section="pkw">
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-4 flex-wrap">
+                                <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                                    <span class="text-2xl mr-3">🚘</span>
+                                    PKW Führerschein
+                                </h3>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B / B78 Automatik / BF17 / B197</span>
+                            </div>
+                            <span class="pricing-icon text-2xl text-accent">−</span>
+                        </div>
+                    </button>
+                    <div class="pricing-content">
+                        <div class="p-6 border-t border-gray-200">
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PKW Führerschein – Wechsler / Umschreiber -->
+            <div class="mb-8" data-pricing-section="pkwWechsler">
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-bold text-gray-900 flex items-center">
+                                <span class="text-2xl mr-3">🚙</span>
+                                PKW Führerschein – Wechsler / Umschreiber
+                            </h3>
+                            <span class="pricing-icon text-2xl text-accent">−</span>
+                        </div>
+                    </button>
+                    <div class="pricing-content">
+                        <div class="p-6 border-t border-gray-200">
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontakt" class="py-8 md:py-12 bg-accent/5">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Interesse?</h2>
+            <p class="text-gray-700 mb-6 text-sm sm:text-base">Fachgerechte Ausbildungen und transparente Preise</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a href="tel:04030924460" class="flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-200">
+                    <i class="fas fa-phone"></i>
+                    <span>040 – 30924460</span>
+                </a>
+                <a href="mailto:info@fahrschule-kompass.de" class="flex items-center space-x-2 bg-gray-100 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition duration-200">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@fahrschule-kompass.de</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer border-t border-footer py-12">
+        <div class="container mx-auto px-4">
+            <!-- Brand Section -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-8 w-auto" loading="lazy" decoding="async">
+                    <span class="text-xl font-bold text-gray-900">Fahrschule Kompass</span>
+                </div>
+                <p class="text-gray-600">Dein Weg zum Führerschein beginnt hier.</p>
+            </div>
+
+            <!-- Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Navigation -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
+                    <div class="space-y-2">
+                        <a href="../index.html" class="block text-gray-600 hover:text-navbar transition duration-200">Home</a>
+                        <a href="./angebot.html" class="block text-gray-600 hover:text-navbar transition duration-200">Unser Angebot</a>
+                        <a href="./anfahrt.html" class="block text-gray-600 hover:text-navbar transition duration-200">Anfahrt</a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                    <div class="space-y-2">
+                        <a href="https://instagram.com/fahrschulekompass" target="_blank" class="text-gray-600 hover:text-navbar transition duration-200 flex items-center">
+                            <i class="fab fa-instagram text-accent mr-2"></i>
+                            Instagram
+                        </a>
+                        <a href="https://facebook.com/fahrschulekompass" target="_blank" class="text-gray-600 hover:text-navbar transition duration-200 flex items-center">
+                            <i class="fab fa-facebook text-accent mr-2"></i>
+                            Facebook
+                        </a>
+                        <a href="https://wa.me/494030924460" target="_blank" class="text-gray-600 hover:text-navbar transition duration-200 flex items-center">
+                            <i class="fab fa-whatsapp text-accent mr-2"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rechtliches -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Rechtliches</h3>
+                    <div class="space-y-2">
+                        <a href="./impressum.html" class="block text-gray-600 hover:text-navbar transition duration-200">Impressum</a>
+                        <a href="./datenschutz.html" class="block text-gray-600 hover:text-navbar transition duration-200">Datenschutz</a>
+                    </div>
+                </div>
+
+                <!-- AGB -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">AGB</h3>
+                    <div class="space-y-2">
+                        <a href="./agb.html" class="block text-gray-600 hover:text-navbar transition duration-200">Allgemeine Geschäftsbedingungen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-footer">
+                <p class="text-center text-gray-600 text-xs pt-2">
+                    © 2025 Fahrschule Kompass – Alle Rechte vorbehalten
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/prices.js" defer></script>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-4 md:p-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">🍪 Cookie-Einstellungen</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        Wir verwenden Cookies, um dir die beste Erfahrung auf unserer Website zu bieten. 
+                        Durch die Nutzung unserer Website stimmst du der Verwendung von Cookies zu.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Weitere Informationen findest du in unserer 
+                        <a href="./datenschutz.html" class="text-accent hover:underline">Datenschutzerklärung</a>.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="cookie-accept-all" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-200 text-sm font-medium">
+                        Alle akzeptieren
+                    </button>
+                    <button id="cookie-accept-necessary" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 text-sm font-medium">
+                        Nur notwendige
+                    </button>
+                    <button id="cookie-settings" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition duration-200 text-sm font-medium">
+                        Einstellungen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

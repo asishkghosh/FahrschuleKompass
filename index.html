@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrschule Kompass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo-black.webp" type="image/webp">
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition duration-200">
+                    <img src="images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-6 md:h-8 w-auto" loading="eager" decoding="async">
+                    <span class="text-lg md:text-xl font-bold text-navbar hidden sm:block">FAHRSCHULE KOMPASS</span>
+                    <span class="text-sm font-bold text-navbar sm:hidden">FAHRSCHULE KOMPASS</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Home</a>
+                    <a href="pages/angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Unser Angebot</a>
+                    <a href="pages/preise.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Preise</a>
+                    <a href="pages/infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Infos</a>
+                    <a href="pages/angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">FAQ</a>
+                    <a href="pages/anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Anfahrt</a>
+                </nav>
+                
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none p-2">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Home</a>
+                    <a href="pages/angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Unser Angebot</a>
+                    <a href="pages/preise.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Preise</a>
+                    <a href="pages/infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Infos</a>
+                    <a href="pages/angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">FAQ</a>
+                    <a href="pages/anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Anfahrt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-12 md:pt-28 md:pb-16 lg:pt-32 lg:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                        Willkommen bei der Fahrschule Kompass
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 mb-4 leading-relaxed">
+                        Erlebe eine hochwertige Fahrausbildung in unseren modernen Fahrschulautos. Mit unserer langjährigen Erfahrung führen wir dich sicher, selbstbewusst und entspannt durch den Straßenverkehr.
+                    </p>
+                    <p class="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
+                        <b>DEIN WEG ZUM FÜHRERSCHEIN </b> wird bei uns lehrreich, angenehm und stressfrei.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+                        <a href="pages/angebot.html#kontakt" class="bg-accent text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-opacity-90 transition duration-200 font-medium text-center">
+                            Jetzt anmelden
+                        </a>
+                        <a href="#angebot" class="border border-navbar text-navbar px-6 sm:px-8 py-3 rounded-lg hover:bg-navbar hover:text-white transition duration-200 font-medium text-center">
+                            Unser Angebot
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center">
+                    <img src="images/hero_section.webp" alt="Fahrschule Kompass Heldbild" class="rounded-lg shadow-lg max-w-md mx-auto lg:max-w-full h-auto" loading="eager" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unser Angebot Section -->
+    <section id="angebot" class="py-12 md:py-16 bg-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">Unser Angebot</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- 1️⃣ Fahrschulklassen -->
+                <div class="bg-card p-6 rounded-lg shadow-md hover-effect transition duration-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Fahrschulklassen</h3>
+                    <p class="text-gray-600 mb-6">
+                        Moderne Fahrzeuge, praxisnaher Unterricht und erfahrene Fahrlehrer begleiten dich sicher auf deinem Weg zum Führerschein.
+                    </p>
+                    <a href="pages/angebot.html#fahrschulklassen" class="text-navbar font-medium inline-flex items-center">
+                        Mehr Infos →
+                    </a>
+                </div>
+                
+                <!-- 2️⃣ Theorieunterricht -->
+                <div class="bg-card p-6 rounded-lg shadow-md hover-effect transition duration-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Theorieunterricht</h3>
+                    <p class="text-gray-600 mb-6">
+                        Interaktive Theorieklassen und unsere Lern-App bereiten dich optimal auf die Prüfung vor – effizient, verständlich und praxisnah.
+                    </p>
+                    <a href="pages/angebot.html#theorie" class="text-navbar font-medium inline-flex items-center">
+                        Mehr Infos →
+                    </a>
+                </div>
+                
+                <!-- 3️⃣ MPU-Beratung -->
+                <div class="bg-card p-6 rounded-lg shadow-md hover-effect transition duration-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">MPU-Beratung</h3>
+                    <p class="text-gray-600 mb-6">
+                        Individuelle Beratung und gezielte Vorbereitung, um die MPU erfolgreich zu bestehen und deinen Führerschein zurückzuerhalten.
+                    </p>
+                    <a href="pages/angebot.html#mpu" class="text-navbar font-medium inline-flex items-center">
+                        Mehr Infos →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unser Team Section -->
+    <section class="py-12 md:py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-900">Unser Team</h2>
+            <p class="text-center text-gray-600 mt-4 mb-8 md:mb-12 max-w-3xl mx-auto text-sm sm:text-base">
+                Bei uns lernst du von erfahrenen Fahrlehrern und kompetenten MPU-Beraterinnen, die dich sicher auf deinem Weg zum Führerschein begleiten.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Önder Özcelik -->
+                <div class="group bg-card rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition duration-200 hover:scale-[1.015]">
+                    <button type="button" class="block w-full focus:outline-none" data-profile src="images/profil_0.webp" aria-label="Önder Özcelik Bild öffnen">
+                        <div class="p-3 md:p-4">
+                            <img src="images/profil_0.webp" alt="Önder Özcelik" class="block w-full h-auto rounded-2xl border-4 border-accent">
+                        </div>
+                    </button>
+                    <div class="px-5 pb-6 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900">Önder Özcelik</h3>
+                        <p class="text-gray-600">Inhaber und Fahrlehrer für B, BE</p>
+                    </div>
+                </div>
+
+                <!-- Nicole Özcelik -->
+                <div class="group bg-card rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition duration-200 hover:scale-[1.015]">
+                    <button type="button" class="block w-full focus:outline-none" data-profile src="images/profil_1.webp" aria-label="Nicole Özcelik Bild öffnen">
+                        <div class="p-3 md:p-4">
+                            <img src="images/profil_1.webp" alt="Nicole Özcelik" class="block w-full h-auto rounded-2xl border-4 border-accent">
+                        </div>
+                    </button>
+                    <div class="px-5 pb-6 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900">Nicole Özcelik</h3>
+                        <p class="text-gray-600">Fahrlehrerin für B, BE und MPU-Beraterin</p>
+                    </div>
+                </div>
+
+                <!-- Jenny Voß -->
+                <div class="group bg-card rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition duration-200 hover:scale-[1.015]">
+                    <button type="button" class="block w-full focus:outline-none" data-profile src="images/profil_2.webp" aria-label="Jenny Voß Bild öffnen">
+                        <div class="p-3 md:p-4">
+                            <img src="images/profil_2.webp" alt="Jenny Voß" class="block w-full h-auto rounded-2xl border-4 border-accent">
+                        </div>
+                    </button>
+                    <div class="px-5 pb-6 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900">Jenny Voß</h3>
+                        <p class="text-gray-600">MPU-Beraterin</p>
+                    </div>
+                </div>
+
+                <!-- Mintje Kox -->
+                <div class="group bg-card rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition duration-200 hover:scale-[1.015]">
+                    <button type="button" class="block w-full focus:outline-none" data-profile src="images/profil_3.webp" aria-label="Mintje Kox Bild öffnen">
+                        <div class="p-3 md:p-4">
+                            <img src="images/profil_3.webp" alt="Mintje Kox" class="block w-full h-auto rounded-2xl border-4 border-accent">
+                        </div>
+                    </button>
+                    <div class="px-5 pb-6 text-center">
+                        <h3 class="text-lg font-semibold text-gray-900">Mintje Kox</h3>
+                        <p class="text-gray-600">Anmeldung</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-footer border-t border-footer py-12">
+        <div class="container mx-auto px-4">
+            <!-- Brand Section -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <img src="images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-8 w-auto" loading="lazy" decoding="async">
+                    <span class="text-xl font-bold text-gray-900">Fahrschule Kompass</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                    Dein Weg zum Führerschein beginnt hier.
+                </p>
+            </div>
+
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8">
+                <!-- Navigation -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
+                    <div class="space-y-2">
+                        <a href="pages/angebot.html" class="block text-gray-600 hover:text-navbar transition duration-200">Unser Angebot</a>
+                        <a href="pages/preise.html" class="block text-gray-600 hover:text-navbar transition duration-200">Preise</a>
+                        <a href="pages/anfahrt.html" class="block text-gray-600 hover:text-navbar transition duration-200">Anfahrt</a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                    <div class="space-y-2">
+                        <a href="https://www.instagram.com/fahrschule_kompass/" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-instagram text-lg"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/FahrschuleKompass" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=4901634696460&text&type=phone_number&app_absent=0" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rechtliches -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Rechtliches</h3>
+                    <div class="space-y-2">
+                        <a href="pages/impressum.html" class="block text-gray-600 hover:text-navbar transition duration-200">Impressum</a>
+                        <a href="pages/datenschutz.html" class="block text-gray-600 hover:text-navbar transition duration-200">Datenschutz</a>
+                    </div>
+                </div>
+
+                <!-- AGB -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">AGB</h3>
+                    <div class="space-y-2">
+                        <a href="pages/agb.html" class="block text-gray-600 hover:text-navbar transition duration-200">Allgemeine Geschäftsbedingungen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-footer">
+                <p class="text-center text-gray-600 text-xs pt-2">
+                    © 2025 Fahrschule Kompass – Alle Rechte vorbehalten
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center z-50">
+        <button type="button" id="image-modal-close" class="absolute top-4 right-4 text-white text-2xl" aria-label="Modal schließen">&times;</button>
+        <img id="image-modal-img" src="" alt="Profil Vollbild" class="max-w-full max-h-[85vh] rounded-lg shadow-2xl">
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-4 md:p-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">🍪 Cookie-Einstellungen</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        Wir verwenden Cookies, um dir die beste Erfahrung auf unserer Website zu bieten. 
+                        Durch die Nutzung unserer Website stimmst du der Verwendung von Cookies zu.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Weitere Informationen findest du in unserer 
+                        <a href="pages/datenschutz.html" class="text-accent hover:underline">Datenschutzerklärung</a>.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="cookie-accept-all" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-200 text-sm font-medium">
+                        Alle akzeptieren
+                    </button>
+                    <button id="cookie-accept-necessary" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 text-sm font-medium">
+                        Nur notwendige
+                    </button>
+                    <button id="cookie-settings" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition duration-200 text-sm font-medium">
+                        Einstellungen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
