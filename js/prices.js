@@ -1,4 +1,4 @@
-// Simple price loader - just updates values from JSON, keeps HTML structure intact
+// Pricing page functionality - Tab switching and data loading
 
 // Icon mapping for Font Awesome icons
 const iconMap = {
@@ -6,6 +6,45 @@ const iconMap = {
     'car-side': 'fa-car-side',
     'moon': 'fa-moon'
 };
+
+// Tab switching functionality
+function initTabs() {
+    const tabs = document.querySelectorAll('.pricing-tab');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetTabId = tab.getAttribute('data-tab');
+            
+            // Remove active class from all tabs
+            tabs.forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            tab.setAttribute('aria-selected', 'true');
+            
+            // Hide all panels
+            panels.forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            
+            // Show target panel
+            const targetPanel = document.getElementById(`tabpanel-${targetTabId}`);
+            if (targetPanel) {
+                targetPanel.classList.remove('hidden');
+                
+                // Load pricing data for this tab if not already loaded
+                const sectionId = targetPanel.getAttribute('data-pricing-section');
+                if (sectionId && window.pricingData) {
+                    loadPricingForSection(sectionId, targetPanel);
+                }
+            }
+        });
+    });
+}
 
 // Update table rows
 function updateTableRows(containerSelector, data, isSonderfahrten = false) {
@@ -17,6 +56,11 @@ function updateTableRows(containerSelector, data, isSonderfahrten = false) {
     
     if (!data || data.length === 0) {
         console.warn('No data provided for table:', containerSelector);
+        // Clear the table if no data
+        const tbody = container.querySelector('tbody');
+        if (tbody) {
+            tbody.innerHTML = '';
+        }
         return;
     }
     
@@ -25,8 +69,6 @@ function updateTableRows(containerSelector, data, isSonderfahrten = false) {
         console.warn('Table tbody not found in:', containerSelector);
         return;
     }
-    
-    console.log(`Updating table ${containerSelector} with ${data.length} rows`);
     
     // Clear existing rows
     tbody.innerHTML = '';
@@ -52,8 +94,6 @@ function updateTableRows(containerSelector, data, isSonderfahrten = false) {
         `;
         tbody.appendChild(row);
     });
-    
-    console.log(`Table ${containerSelector} updated with ${data.length} rows`);
 }
 
 // Update additional fees
@@ -69,16 +109,13 @@ function updateAdditionalFees(containerSelector, additional) {
         return;
     }
     
-    console.log('Updating additional fees for:', containerSelector, additional);
-    
-    // Find the fees container (space-y-2 div or the container itself)
+    // Find the fees container (space-y-2 div)
     let feesContainer = container.querySelector('.space-y-2');
     if (!feesContainer) {
-        // For first section, it's directly in the container
         feesContainer = container;
     }
     
-    // Clear existing fee items (but keep the structure like h5 if exists)
+    // Clear existing fee items
     const existingItems = feesContainer.querySelectorAll('.flex.justify-between.items-center');
     existingItems.forEach(item => item.remove());
     
@@ -116,8 +153,67 @@ function updateAdditionalFees(containerSelector, additional) {
         noteElement.textContent = additional.note;
         feesContainer.appendChild(noteElement);
     }
+}
+
+// Update package header information
+function updatePackageInfo(panel, packageData) {
+    const titleElement = panel.querySelector('[data-package-title]');
+    const subtitleElement = panel.querySelector('[data-package-subtitle]');
+    const classesElement = panel.querySelector('[data-package-classes]');
     
-    console.log('Additional fees updated for:', containerSelector);
+    if (titleElement && packageData.title) {
+        titleElement.textContent = packageData.title;
+    }
+    
+    if (subtitleElement) {
+        if (packageData.subtitle) {
+            subtitleElement.textContent = packageData.subtitle;
+            subtitleElement.style.display = 'block';
+        } else {
+            subtitleElement.style.display = 'none';
+        }
+    }
+    
+    if (classesElement) {
+        if (packageData.classes) {
+            classesElement.innerHTML = `<span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: ${packageData.classes}</span>`;
+            classesElement.style.display = 'block';
+        } else {
+            classesElement.innerHTML = '';
+            classesElement.style.display = 'none';
+        }
+    }
+}
+
+// Load pricing data for a specific section
+function loadPricingForSection(sectionId, panel) {
+    if (!window.pricingData || !window.pricingData.pricing || !window.pricingData.pricing[sectionId]) {
+        console.warn('Pricing data not found for section:', sectionId);
+        return;
+    }
+    
+    const packageData = window.pricingData.pricing[sectionId];
+    
+    // Update package header
+    updatePackageInfo(panel, packageData);
+    
+    // Update Fahrstunden table
+    const fahrstundenTable = panel.querySelector('[data-table="fahrstunden"]');
+    if (fahrstundenTable && packageData.fahrstunden) {
+        updateTableRows(`#tabpanel-${sectionId} [data-table="fahrstunden"]`, packageData.fahrstunden);
+    }
+    
+    // Update Sonderfahrten table
+    const sonderfahrtenTable = panel.querySelector('[data-table="sonderfahrten"]');
+    if (sonderfahrtenTable && packageData.sonderfahrten) {
+        updateTableRows(`#tabpanel-${sectionId} [data-table="sonderfahrten"]`, packageData.sonderfahrten, true);
+    }
+    
+    // Update additional fees
+    const additionalFees = panel.querySelector('[data-additional-fees]');
+    if (additionalFees && packageData.additional) {
+        updateAdditionalFees(`#tabpanel-${sectionId} [data-additional-fees]`, packageData.additional);
+    }
 }
 
 // Update notice message
@@ -141,7 +237,7 @@ async function loadPrices() {
                 <a href="http://localhost:8000/pages/preise.html" class="underline font-bold">http://localhost:8000/pages/preise.html</a> 
                 instead of opening the file directly.
             `;
-            const pricingContainer = document.querySelector('[data-pricing-section="pkwAnhanger"]');
+            const pricingContainer = document.querySelector('.tab-panels');
             if (pricingContainer) {
                 pricingContainer.parentNode.insertBefore(errorDiv, pricingContainer);
             }
@@ -157,65 +253,29 @@ async function loadPrices() {
         const data = await response.json();
         console.log('Prices loaded successfully:', data);
         
+        // Store pricing data globally
+        window.pricingData = data;
+        
         // Update notice if exists
         if (data.notice && data.notice.message) {
             updateNotice(data.notice.message);
         }
         
-        // Update PKW & Anhängerführerschein section
-        if (data.pricing && data.pricing.pkwAnhanger) {
-            const section = data.pricing.pkwAnhanger;
-            console.log('Updating pkwAnhanger section:', section);
-            
-            // Update Fahrstunden table
-            const fahrstundenTable = document.querySelector('[data-pricing-section="pkwAnhanger"] [data-table="fahrstunden"]');
-            console.log('Fahrstunden table found:', fahrstundenTable);
-            updateTableRows('[data-pricing-section="pkwAnhanger"] [data-table="fahrstunden"]', section.fahrstunden);
-            
-            // Update Sonderfahrten table
-            const sonderfahrtenTable = document.querySelector('[data-pricing-section="pkwAnhanger"] [data-table="sonderfahrten"]');
-            console.log('Sonderfahrten table found:', sonderfahrtenTable);
-            updateTableRows('[data-pricing-section="pkwAnhanger"] [data-table="sonderfahrten"]', section.sonderfahrten, true);
-            
-            // Update additional fees
-            const additionalFees = document.querySelector('[data-pricing-section="pkwAnhanger"] [data-additional-fees]');
-            console.log('Additional fees container found:', additionalFees);
-            updateAdditionalFees('[data-pricing-section="pkwAnhanger"] [data-additional-fees]', section.additional);
+        // Load data for the active tab (North-Side by default)
+        const activePanel = document.querySelector('.tab-panel.active');
+        if (activePanel) {
+            const sectionId = activePanel.getAttribute('data-pricing-section');
+            if (sectionId) {
+                loadPricingForSection(sectionId, activePanel);
+            }
         }
         
-        // Update PKW Führerschein section
-        if (data.pricing && data.pricing.pkw) {
-            const section = data.pricing.pkw;
-            console.log('Updating pkw section:', section);
-            
-            // Update Fahrstunden table
-            updateTableRows('[data-pricing-section="pkw"] [data-table="fahrstunden"]', section.fahrstunden);
-            
-            // Update Sonderfahrten table
-            updateTableRows('[data-pricing-section="pkw"] [data-table="sonderfahrten"]', section.sonderfahrten, true);
-            
-            // Update additional fees
-            updateAdditionalFees('[data-pricing-section="pkw"] [data-additional-fees]', section.additional);
-        }
-        
-        // Update PKW Wechsler section
-        if (data.pricing && data.pricing.pkwWechsler) {
-            const section = data.pricing.pkwWechsler;
-            console.log('Updating pkwWechsler section:', section);
-            
-            // Update Fahrstunden table
-            updateTableRows('[data-pricing-section="pkwWechsler"] [data-table="fahrstunden"]', section.fahrstunden);
-            
-            // Update additional fees (no sonderfahrten for this section)
-            updateAdditionalFees('[data-pricing-section="pkwWechsler"] [data-additional-fees]', section.additional);
-        }
-        
-        console.log('All prices updated successfully');
+        console.log('All prices loaded successfully');
         
     } catch (error) {
         console.error('Error loading prices:', error);
         // Show error message to help debug
-        const pricingContainer = document.querySelector('[data-pricing-section="pkwAnhanger"]');
+        const pricingContainer = document.querySelector('.tab-panels');
         if (pricingContainer) {
             const errorDiv = document.createElement('div');
             errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4';
@@ -225,15 +285,18 @@ async function loadPrices() {
     }
 }
 
-// Initialize when DOM is ready - wait a bit to ensure all scripts are loaded
+// Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, checking for pricing sections...');
-    const pricingSections = document.querySelectorAll('[data-pricing-section]');
-    console.log('Found pricing sections:', pricingSections.length);
+    console.log('DOM loaded, initializing pricing page...');
     
-    // Only load prices if we're on the pricing page and containers exist
+    // Initialize tabs
+    initTabs();
+    
+    // Check if we're on the pricing page
+    const pricingSections = document.querySelectorAll('[data-pricing-section]');
     if (pricingSections.length > 0) {
-        console.log('Loading prices...');
+        console.log('Found pricing sections:', pricingSections.length);
+        
         // Small delay to ensure DOM is fully ready
         setTimeout(function() {
             loadPrices();
@@ -245,8 +308,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Also try on window load as backup
 window.addEventListener('load', function() {
-    if (document.querySelector('[data-pricing-section]') && document.querySelectorAll('tbody').length > 0 && document.querySelector('tbody').innerHTML.trim() === '') {
-        console.log('Window loaded, prices still empty, reloading...');
+    if (document.querySelector('[data-pricing-section]') && !window.pricingData) {
+        console.log('Window loaded, prices not loaded yet, loading now...');
         loadPrices();
     }
 });

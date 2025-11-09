@@ -63,15 +63,25 @@
     <div class="pt-24 md:pt-32"></div>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-accent/10 to-accent/5 py-12 md:py-16">
+    <section class="bg-gradient-to-br from-accent/10 to-accent/5 pt-12 md:pt-16 pb-6 md:pb-8">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Preisliste</h1>
-            <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto mb-4">Hier findest du alle Kosten und Gebühren für deine Fahrausbildung bei Fahrschule Kompass. Alle Preise inkl. gesetzl. MwSt.</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Kompass-Pakete & Preise</h1>
+            <div class="bg-accent/10 border border-accent/30 rounded-xl p-6 md:p-8 mb-6 max-w-4xl mx-auto">
+                <div class="flex items-start space-x-3 mb-4">
+                    <div class="flex-1">
+                        <div class="space-y-3 text-gray-700 text-sm md:text-base leading-relaxed">
+                            <p>Die Fahrschule bietet verschiedene Kompass-Pakete <b>(North, West, East, South)</b> an, um Ihre Ausbildung optimal an Lerntempo, Zeit und Ziel anzupassen.
+                            Die Grundgebühr variiert je nach Paket, da sich der zeitliche Aufwand und die persönliche Betreuung durch den Fahrlehrer unterscheiden.</p>
+                            <p class="font-medium text-gray-900">Alle Preise verstehen sich inklusive Theorieunterricht und zzgl. TÜV- und Verwaltungsgebühren (LBV).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Important Notice -->
-    <section class="py-4">
+    <section class="pt-2 pb-4">
         <div class="container mx-auto px-4 max-w-4xl">
             <div class="bg-card border border-red-200 rounded-xl shadow-sm overflow-hidden">
                 <div class="px-6 py-4 bg-red-50">
@@ -87,95 +97,90 @@
         </div>
     </section>
 
-    
-
     <!-- Pricing Sections -->
     <section class="py-8 md:py-12">
         <div class="container mx-auto px-4 max-w-5xl">
-            <!-- PKW & Anhängerführerschein -->
-            <div class="mb-8" data-pricing-section="pkwAnhanger">
-                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center gap-4 flex-wrap">
-                                <h3 class="text-xl font-bold text-gray-900 flex items-center">
-                                    <span class="text-2xl mr-3">🚗</span>
-                                    PKW & Anhängerführerschein
-                                </h3>
-                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B96 / BE</span>
-                            </div>
-                            <span class="pricing-icon text-2xl text-accent">−</span>
-                        </div>
-                    </button>
-                    <div class="pricing-content">
-                        <div class="p-6 border-t border-gray-200">
-                            <!-- Fahrstunden Table -->
-                            <div class="mb-6">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
-                                <div class="overflow-x-auto">
-                                    <table class="w-full border-collapse" data-table="fahrstunden">
-                                        <thead>
-                                            <tr class="bg-gray-50">
-                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
-                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
-                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- Prices will be populated from JSON -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <!-- Sonderfahrten Table -->
-                            <div class="mb-6">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
-                                <div class="overflow-x-auto">
-                                    <table class="w-full border-collapse" data-table="sonderfahrten">
-                                        <thead>
-                                            <tr class="bg-gray-50">
-                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
-                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
-                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <!-- Prices will be populated from JSON -->
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                            <!-- Additional Fees -->
-                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
-                                <div class="space-y-2">
-                                    <!-- Prices will be populated from JSON -->
-                                    <p class="text-sm text-gray-600 mt-2 pt-2 border-t border-accent/20"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Title -->
+            
+            <!-- Tabs Navigation -->
+            <div class="mb-8">
+                <div class="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-gray-100">
+                    <nav class="flex flex-wrap justify-center gap-2 md:gap-3" role="tablist" aria-label="Pricing Packages">
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap active"
+                            data-tab="northSide"
+                            role="tab"
+                            aria-selected="true"
+                            aria-controls="tabpanel-northSide"
+                            id="tab-northSide">
+                            <span class="relative z-10">North-Side</span>
+                        </button>
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap"
+                            data-tab="westSide"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="tabpanel-westSide"
+                            id="tab-westSide">
+                            <span class="relative z-10">West-Side</span>
+                        </button>
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap"
+                            data-tab="eastSide"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="tabpanel-eastSide"
+                            id="tab-eastSide">
+                            <span class="relative z-10">East-Side</span>
+                        </button>
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap"
+                            data-tab="southSide"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="tabpanel-southSide"
+                            id="tab-southSide">
+                            <span class="relative z-10">South-Side</span>
+                        </button>
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap"
+                            data-tab="wechsler"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="tabpanel-wechsler"
+                            id="tab-wechsler">
+                            <span class="relative z-10">Wechsler</span>
+                        </button>
+                        <button 
+                            class="pricing-tab px-5 py-3 md:px-7 md:py-4 text-sm md:text-base font-semibold transition-all duration-200 whitespace-nowrap"
+                            data-tab="anhaenger"
+                            role="tab"
+                            aria-selected="false"
+                            aria-controls="tabpanel-anhaenger"
+                            id="tab-anhaenger">
+                            <span class="relative z-10">Anhänger</span>
+                        </button>
+                    </nav>
                 </div>
             </div>
 
-            <!-- PKW Führerschein -->
-            <div class="mb-8" data-pricing-section="pkw">
-                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center gap-4 flex-wrap">
-                                <h3 class="text-xl font-bold text-gray-900 flex items-center">
-                                    <span class="text-2xl mr-3">🚘</span>
-                                    PKW Führerschein
-                                </h3>
+            <!-- Tab Panels -->
+            <div class="tab-panels">
+                <!-- North-Side Panel -->
+                <div 
+                    class="tab-panel active" 
+                    id="tabpanel-northSide" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-northSide"
+                    data-pricing-section="northSide">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Kompass North-Side Paket</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle>PKW-Führerschein – Bis zu 2 Fahrstunden pro Woche</p>
+                            <div class="mb-6" data-package-classes>
                                 <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B / B78 Automatik / BF17 / B197</span>
                             </div>
-                            <span class="pricing-icon text-2xl text-accent">−</span>
-                        </div>
-                    </button>
-                    <div class="pricing-content">
-                        <div class="p-6 border-t border-gray-200">
+
                             <!-- Fahrstunden Table -->
                             <div class="mb-6">
                                 <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
@@ -224,22 +229,22 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- PKW Führerschein – Wechsler / Umschreiber -->
-            <div class="mb-8" data-pricing-section="pkwWechsler">
-                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-                    <button class="pricing-toggle w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition duration-200 focus:outline-none">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-xl font-bold text-gray-900 flex items-center">
-                                <span class="text-2xl mr-3">🚙</span>
-                                PKW Führerschein – Wechsler / Umschreiber
-                            </h3>
-                            <span class="pricing-icon text-2xl text-accent">−</span>
-                        </div>
-                    </button>
-                    <div class="pricing-content">
-                        <div class="p-6 border-t border-gray-200">
+                <!-- West-Side Panel -->
+                <div 
+                    class="tab-panel hidden" 
+                    id="tabpanel-westSide" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-westSide"
+                    data-pricing-section="westSide">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Kompass West-Side Paket</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle>PKW-Führerschein – Bis zu 4 Fahrstunden pro Woche</p>
+                            <div class="mb-6" data-package-classes>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B / B78 Automatik / BF17 / B197</span>
+                            </div>
+
                             <!-- Fahrstunden Table -->
                             <div class="mb-6">
                                 <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
@@ -248,6 +253,279 @@
                                         <thead>
                                             <tr class="bg-gray-50">
                                                 <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- East-Side Panel -->
+                <div 
+                    class="tab-panel hidden" 
+                    id="tabpanel-eastSide" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-eastSide"
+                    data-pricing-section="eastSide">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Kompass East-Side Paket</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle>PKW-Führerschein – Bis zu 6 Fahrstunden pro Woche</p>
+                            <div class="mb-6" data-package-classes>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B / B78 Automatik / BF17 / B197</span>
+                            </div>
+
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- South-Side Panel -->
+                <div 
+                    class="tab-panel hidden" 
+                    id="tabpanel-southSide" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-southSide"
+                    data-pricing-section="southSide">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Kompass South-Side Paket</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle>PKW-Führerschein – Bis zu 8 Fahrstunden pro Woche</p>
+                            <div class="mb-6" data-package-classes>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B / B78 Automatik / BF17 / B197</span>
+                            </div>
+
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wechsler Panel -->
+                <div 
+                    class="tab-panel hidden" 
+                    id="tabpanel-wechsler" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-wechsler"
+                    data-pricing-section="wechsler">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Fahrschul-Wechsler / Führerschein-Umschreiber</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle></p>
+                            <div class="mb-6" data-package-classes></div>
+
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Additional Fees -->
+                            <div class="bg-accent/10 rounded-lg p-4 border border-accent/20" data-additional-fees>
+                                <h5 class="font-semibold text-gray-900 mb-3">Weitere Kosten:</h5>
+                                <div class="space-y-2">
+                                    <!-- Prices will be populated from JSON -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anhänger Panel -->
+                <div 
+                    class="tab-panel hidden" 
+                    id="tabpanel-anhaenger" 
+                    role="tabpanel" 
+                    aria-labelledby="tab-anhaenger"
+                    data-pricing-section="anhaenger">
+                    <div class="bg-card overflow-hidden">
+                        <div class="p-6 md:p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2" data-package-title>Anhängerführerschein (B96 / BE)</h3>
+                            <p class="text-gray-600 mb-4" data-package-subtitle></p>
+                            <div class="mb-6" data-package-classes>
+                                <span class="text-sm font-bold text-white bg-navbar px-3 py-1 rounded-md">Führerscheinklasse: B96 / BE</span>
+                            </div>
+
+                            <!-- Fahrstunden Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Fahrstunden</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="fahrstunden">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Leistung</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
+                                                <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Prices will be populated from JSON -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Sonderfahrten Table -->
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold text-gray-900 mb-4">Sonderfahrten</h4>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full border-collapse" data-table="sonderfahrten">
+                                        <thead>
+                                            <tr class="bg-gray-50">
+                                                <th class="border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900">Fahrtart</th>
                                                 <th class="border border-gray-200 px-4 py-3 text-center font-semibold text-gray-900">Dauer</th>
                                                 <th class="border border-gray-200 px-4 py-3 text-right font-semibold text-gray-900">Preis</th>
                                             </tr>

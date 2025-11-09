@@ -1,18 +1,220 @@
 {
   "pricing": {
-    "pkwAnhanger": {
-      "emoji": "🚗",
-      "title": "PKW & Anhängerführerschein",
-      "classes": "B96 / BE",
+    "northSide": {
+      "id": "northSide",
+      "title": "Kompass North-Side Paket",
+      "subtitle": "PKW-Führerschein – Bis zu 2 Fahrstunden pro Woche",
+      "classes": "B / B78 Automatik / BF17 / B197",
       "fahrstunden": [
         {
           "leistung": "Fahrstunde",
-          "dauer": "45 Minuten",
+          "dauer": "45 Min.",
+          "preis": "69"
+        },
+        {
+          "leistung": "Fahrstunde (Doppelstunde)",
+          "dauer": "90 Min.",
+          "preis": "138"
+        }
+      ],
+      "sonderfahrten": [
+        {
+          "fahrtart": "Überlandfahrt",
+          "icon": "road",
+          "dauer": "45 Min.",
+          "preis": "75"
+        },
+        {
+          "fahrtart": "Autobahnfahrt",
+          "icon": "car-side",
+          "dauer": "45 Min.",
+          "preis": "75"
+        },
+        {
+          "fahrtart": "Nachtfahrt",
+          "icon": "moon",
+          "dauer": "45 Min.",
+          "preis": "75"
+        }
+      ],
+      "additional": {
+        "grundbetrag": {
+          "label": "Grundbetrag (inkl. Theorie-Themen)",
+          "value": "395",
+          "highlight": true
+        },
+        "lehrmaterial": {
+          "label": "Lehrmaterial (Fahren lernen Max inkl. Drivers Cam)",
+          "value": "100"
+        },
+        "fahrstundenNach17": {
+          "label": "Fahrstunden nach 17 Uhr",
+          "value": "75",
+          "dauer": "45 Min."
+        },
+        "vorstellungTheoriepruefung": {
+          "label": "Vorstellung Theorieprüfung",
+          "value": "70"
+        },
+        "vorstellungPraktischePruefung": {
+          "label": "Vorstellung Praktische Prüfung",
+          "value": "195"
+        },
+        "testfahrtB197": {
+          "label": "Testfahrt B197 Schaltkompetenz",
+          "value": "80"
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
+      }
+    },
+    "westSide": {
+      "id": "westSide",
+      "title": "Kompass West-Side Paket",
+      "subtitle": "PKW-Führerschein – Bis zu 4 Fahrstunden pro Woche",
+      "classes": "B / B78 Automatik / BF17 / B197",
+      "fahrstunden": [
+        {
+          "leistung": "Fahrstunde",
+          "dauer": "45 Min.",
+          "preis": "69"
+        },
+        {
+          "leistung": "Fahrstunde (Doppelstunde)",
+          "dauer": "90 Min.",
+          "preis": "138"
+        }
+      ],
+      "sonderfahrten": [
+        {
+          "fahrtart": "Überlandfahrt",
+          "icon": "road",
+          "dauer": "45 Min.",
+          "preis": "75"
+        },
+        {
+          "fahrtart": "Autobahnfahrt",
+          "icon": "car-side",
+          "dauer": "45 Min.",
+          "preis": "75"
+        },
+        {
+          "fahrtart": "Nachtfahrt",
+          "icon": "moon",
+          "dauer": "45 Min.",
+          "preis": "75"
+        }
+      ],
+      "additional": {
+        "grundbetrag": {
+          "label": "Grundbetrag (inkl. Theorie-Themen)",
+          "value": "450",
+          "highlight": true
+        },
+        "lehrmaterial": {
+          "label": "Lehrmaterial (Fahren lernen Max inkl. Drivers Cam)",
+          "value": "100"
+        },
+        "fahrstundenNach17": {
+          "label": "Fahrstunden nach 17 Uhr",
+          "value": "75",
+          "dauer": "45 Min."
+        },
+        "vorstellungTheoriepruefung": {
+          "label": "Vorstellung Theorieprüfung",
+          "value": "70"
+        },
+        "vorstellungPraktischePruefung": {
+          "label": "Vorstellung Praktische Prüfung",
+          "value": "195"
+        },
+        "testfahrtB197": {
+          "label": "Testfahrt B197 Schaltkompetenz",
+          "value": "80"
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
+      }
+    },
+    "eastSide": {
+      "id": "eastSide",
+      "title": "Kompass East-Side Paket",
+      "subtitle": "PKW-Führerschein – Bis zu 6 Fahrstunden pro Woche",
+      "classes": "B / B78 Automatik / BF17 / B197",
+      "fahrstunden": [
+        {
+          "leistung": "Fahrstunde",
+          "dauer": "45 Min.",
+          "preis": "69"
+        },
+        {
+          "leistung": "Fahrstunde (Doppelstunde)",
+          "dauer": "90 Min.",
+          "preis": "138"
+        }
+      ],
+      "sonderfahrten": [
+        {
+          "fahrtart": "Überlandfahrt",
+          "icon": "road",
+          "dauer": "45 Min.",
+          "preis": "80"
+        },
+        {
+          "fahrtart": "Autobahnfahrt",
+          "icon": "car-side",
+          "dauer": "45 Min.",
+          "preis": "80"
+        },
+        {
+          "fahrtart": "Nachtfahrt",
+          "icon": "moon",
+          "dauer": "45 Min.",
+          "preis": "80"
+        }
+      ],
+      "additional": {
+        "grundbetrag": {
+          "label": "Grundbetrag (inkl. Theorie-Themen)",
+          "value": "595",
+          "highlight": true
+        },
+        "lehrmaterial": {
+          "label": "Lehrmaterial (Fahren lernen Max inkl. Drivers Cam)",
+          "value": "100"
+        },
+        "fahrstundenNach17": {
+          "label": "Fahrstunden nach 17 Uhr",
+          "value": "75",
+          "dauer": "45 Min."
+        },
+        "vorstellungTheoriepruefung": {
+          "label": "Vorstellung Theorieprüfung",
+          "value": "70"
+        },
+        "vorstellungPraktischePruefung": {
+          "label": "Vorstellung Praktische Prüfung",
+          "value": "195"
+        },
+        "testfahrtB197": {
+          "label": "Testfahrt B197 Schaltkompetenz",
+          "value": "80"
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
+      }
+    },
+    "southSide": {
+      "id": "southSide",
+      "title": "Kompass South-Side Paket",
+      "subtitle": "PKW-Führerschein – Bis zu 8 Fahrstunden pro Woche",
+      "classes": "B / B78 Automatik / BF17 / B197",
+      "fahrstunden": [
+        {
+          "leistung": "Fahrstunde",
+          "dauer": "45 Min.",
           "preis": "70"
         },
         {
           "leistung": "Fahrstunde (Doppelstunde)",
-          "dauer": "90 Minuten",
+          "dauer": "90 Min.",
           "preis": "140"
         }
       ],
@@ -20,143 +222,167 @@
         {
           "fahrtart": "Überlandfahrt",
           "icon": "road",
-          "dauer": "45 Minuten",
-          "preis": "75"
+          "dauer": "45 Min.",
+          "preis": "80"
         },
         {
           "fahrtart": "Autobahnfahrt",
           "icon": "car-side",
-          "dauer": "45 Minuten",
-          "preis": "75"
+          "dauer": "45 Min.",
+          "preis": "80"
         },
         {
           "fahrtart": "Nachtfahrt",
           "icon": "moon",
-          "dauer": "45 Minuten",
+          "dauer": "45 Min.",
           "preis": "80"
         }
       ],
       "additional": {
         "grundbetrag": {
-          "label": "Grundbetrag:",
-          "value": "350",
+          "label": "Grundbetrag (inkl. Theorie-Themen)",
+          "value": "650",
           "highlight": true
         },
-        "praktischePruefung": {
-          "label": "Praktische Prüfung:",
-          "value": "195",
-          "highlight": true
+        "lehrmaterial": {
+          "label": "Lehrmaterial (Fahren lernen Max inkl. Drivers Cam)",
+          "value": "100"
         },
-        "note": "(zzgl. LBV Antragsgebühren & TÜV Gebühren)"
+        "fahrstundenNach17": {
+          "label": "Fahrstunden nach 17 Uhr",
+          "value": "75",
+          "dauer": "45 Min."
+        },
+        "vorstellungTheoriepruefung": {
+          "label": "Vorstellung Theorieprüfung",
+          "value": "70"
+        },
+        "vorstellungPraktischePruefung": {
+          "label": "Vorstellung Praktische Prüfung",
+          "value": "195"
+        },
+        "testfahrtB197": {
+          "label": "Testfahrt B197 Schaltkompetenz",
+          "value": "80"
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
       }
     },
-    "pkw": {
-      "emoji": "🚘",
-      "title": "PKW Führerschein",
-      "classes": "B / B78 Automatik / BF17 / B197",
+    "wechsler": {
+      "id": "wechsler",
+      "title": "Fahrschul-Wechsler / Führerschein-Umschreiber",
+      "subtitle": "",
+      "classes": "",
       "fahrstunden": [
         {
           "leistung": "Fahrstunde",
-          "dauer": "45 Minuten",
-          "preis": "65"
+          "dauer": "45 Min.",
+          "preis": "75"
         },
         {
           "leistung": "Fahrstunde (Doppelstunde)",
-          "dauer": "90 Minuten",
-          "preis": "130"
+          "dauer": "90 Min.",
+          "preis": "150"
+        }
+      ],
+      "sonderfahrten": [
+        {
+          "fahrtart": "Überlandfahrt (bei Bedarf)",
+          "icon": "road",
+          "dauer": "45 Min.",
+          "preis": "75"
         },
         {
-          "leistung": "Fahrstunden nach 16 Uhr",
-          "dauer": "45 Minuten",
-          "preis": "80"
+          "fahrtart": "Autobahnfahrt (bei Bedarf)",
+          "icon": "car-side",
+          "dauer": "45 Min.",
+          "preis": "75"
+        },
+        {
+          "fahrtart": "Nachtfahrt (bei Bedarf)",
+          "icon": "moon",
+          "dauer": "45 Min.",
+          "preis": "75"
+        }
+      ],
+      "additional": {
+        "lehrmaterial": {
+          "label": "Lehrmaterial (inkl. Drivers Cam)",
+          "value": "100"
+        },
+        "fahrstundenNach17": {
+          "label": "Fahrstunden nach 17 Uhr",
+          "value": "75",
+          "dauer": "45 Min."
+        },
+        "testfahrtB197": {
+          "label": "Testfahrt B197 Schaltkompetenz",
+          "value": "80"
+        },
+        "vorstellungTheoriepruefung": {
+          "label": "Vorstellung Theorieprüfung",
+          "value": "70"
+        },
+        "vorstellungPraktischePruefung": {
+          "label": "Vorstellung Praktische Prüfung",
+          "value": "195"
+        },
+        "grundbetrag": {
+          "label": "Grundbetrag",
+          "value": "450",
+          "highlight": true
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
+      }
+    },
+    "anhaenger": {
+      "id": "anhaenger",
+      "title": "Anhängerführerschein (B96 / BE)",
+      "subtitle": "",
+      "classes": "B96 / BE",
+      "fahrstunden": [
+        {
+          "leistung": "Fahrstunde",
+          "dauer": "45 Min.",
+          "preis": "70"
+        },
+        {
+          "leistung": "Fahrstunde (Doppelstunde)",
+          "dauer": "90 Min.",
+          "preis": "140"
         }
       ],
       "sonderfahrten": [
         {
           "fahrtart": "Überlandfahrt",
           "icon": "road",
-          "dauer": "45 Minuten",
+          "dauer": "45 Min.",
           "preis": "75"
         },
         {
           "fahrtart": "Autobahnfahrt",
           "icon": "car-side",
-          "dauer": "45 Minuten",
+          "dauer": "45 Min.",
           "preis": "75"
         },
         {
           "fahrtart": "Nachtfahrt",
           "icon": "moon",
-          "dauer": "45 Minuten",
-          "preis": "75"
-        }
-      ],
-      "additional": {
-        "grundbetrag": {
-          "label": "Grundbetrag:",
-          "value": "350"
-        },
-        "lehrmaterial": {
-          "label": "Lehrmaterial (inkl. Drivers Cam):",
-          "value": "120"
-        },
-        "unterricht": {
-          "label": "Theoretischer Unterricht Thema 1 bis 14:",
-          "value": "120"
-        },
-        "vorstellungTheoriepruefung": {
-          "label": "Vorstellung Theorieprüfung:",
-          "value": "70"
-        },
-        "vorstellungPraktischePruefung": {
-          "label": "Vorstellung Praktische Prüfung:",
-          "value": "195"
-        },
-        "testfahrtB197": {
-          "label": "Testfahrt B197 (Schaltkompetenz):",
-          "value": "90"
-        }
-      }
-    },
-    "pkwWechsler": {
-      "emoji": "🚙",
-      "title": "PKW Führerschein – Wechsler / Umschreiber",
-      "classes": "",
-      "fahrstunden": [
-        {
-          "leistung": "Fahrstunde",
-          "dauer": "45 Minuten",
-          "preis": "75"
-        },
-        {
-          "leistung": "Fahrstunde (Doppelstunde)",
-          "dauer": "90 Minuten",
-          "preis": "150"
-        },
-        {
-          "leistung": "Fahrstunden nach 16 Uhr",
-          "dauer": "45 Minuten",
+          "dauer": "45 Min.",
           "preis": "80"
         }
       ],
-      "sonderfahrten": [],
       "additional": {
         "grundbetrag": {
-          "label": "Grundbetrag:",
-          "value": "450"
+          "label": "Grundbetrag",
+          "value": "350",
+          "highlight": true
         },
-        "lehrmaterial": {
-          "label": "Lehrmaterial (inkl. Drivers Cam):",
-          "value": "120"
-        },
-        "vorstellungTheoriepruefung": {
-          "label": "Vorstellung Theorieprüfung:",
-          "value": "70"
-        },
-        "vorstellungPraktischePruefung": {
-          "label": "Vorstellung Praktische Prüfung:",
+        "praktischePruefung": {
+          "label": "Praktische Prüfung",
           "value": "195"
-        }
+        },
+        "note": "Zzgl. LBV-Antragsgebühren & TÜV-Gebühren"
       }
     }
   },
@@ -164,4 +390,3 @@
     "message": "Alle genannten Preise dienen nur zur Orientierung und können variieren. Für die aktuell gültigen Preise und Angebote wende dich bitte direkt an die Fahrschule Kompass."
   }
 }
-
