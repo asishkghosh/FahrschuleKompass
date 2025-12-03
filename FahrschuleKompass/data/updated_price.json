@@ -1,0 +1,49 @@
+{
+  "pricing": {
+    "pkw": {
+      "id": "pkw",
+      "title": "PKW-Führerschein",
+      "classes": "B / B78 Automatik / BF17 / B197",
+      "fahrstunden": [
+        { "leistung": "Fahrstunde", "dauer": "45 Min.", "preis": "69" },
+        { "leistung": "Fahrstunde (Doppelstunde)", "dauer": "90 Min.", "preis": "138" }
+      ],
+      "sonderfahrten": [
+        { "fahrtart": "Ueberlandfahrt", "icon": "road", "dauer": "45 Min.", "preis": "75" },
+        { "fahrtart": "Autobahnfahrt", "icon": "car-side", "dauer": "45 Min.", "preis": "75" },
+        { "fahrtart": "Nachtfahrt", "icon": "moon", "dauer": "45 Min.", "preis": "75" }
+      ],
+      "additional": {
+        "grundbetrag": { "label": "Grundbetrag (inkl. Theorie-Themen)", "value": "450", "highlight": true },
+        "lehrmaterial": { "label": "Lehrmaterial (Fahren lernen Max inkl. Drivers Cam)", "value": "100" },
+        "fahrstundenNach17": { "label": "Fahrstunden nach 17 Uhr", "value": "75", "dauer": "45 Min." },
+        "vorstellungTheoriepruefung": { "label": "Vorstellung Theoriepruefung", "value": "70" },
+        "vorstellungPraktischePruefung": { "label": "Vorstellung Praktische Pruefung", "value": "195" },
+        "testfahrtB197": { "label": "Testfahrt B197 Schaltkompetenz", "value": "80" },
+        "note": "Zzgl. LBV-Antragsgebuehren & TUEV-Gebuehren"
+      }
+    },
+    "anhaenger": {
+      "id": "anhaenger",
+      "title": "Anhängerführerschein",
+      "classes": "B96 / BE",
+      "fahrstunden": [
+        { "leistung": "Fahrstunde", "dauer": "45 Min.", "preis": "75" },
+        { "leistung": "Fahrstunde (Doppelstunde)", "dauer": "90 Min.", "preis": "150" }
+      ],
+      "sonderfahrten": [
+        { "fahrtart": "Ueberlandfahrt", "icon": "road", "dauer": "45 Min.", "preis": "75" },
+        { "fahrtart": "Autobahnfahrt", "icon": "car-side", "dauer": "45 Min.", "preis": "75" },
+        { "fahrtart": "Nachtfahrt", "icon": "moon", "dauer": "45 Min.", "preis": "80" }
+      ],
+      "additional": {
+        "grundbetrag": { "label": "Grundbetrag", "value": "450", "highlight": true },
+        "praktischePruefung": { "label": "Praktische Pruefung", "value": "195" },
+        "note": "Zzgl. LBV-Antragsgebuehren & TUEV-Gebuehren"
+      }
+    }
+  },
+  "notice": {
+    "message": "Alle genannten Preise dienen nur zur Orientierung und koennen variieren. Fuer die aktuell gueltigen Preise und Angebote wende dich bitte direkt an die Fahrschule Kompass."
+  }
+}

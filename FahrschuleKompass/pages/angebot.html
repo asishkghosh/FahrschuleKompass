@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unser Angebot – Fahrschule Kompass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/logo-black.webp" type="image/webp">
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition duration-200">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-10 md:h-12 w-auto">
+                    <span class="text-lg md:text-xl font-bold text-navbar hidden sm:block">FAHRSCHULE KOMPASS</span>
+                    <span class="text-sm font-bold text-navbar sm:hidden">FAHRSCHULE KOMPASS</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Unser Angebot</a>
+                    <a href="./preise_new.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Infos</a>
+                    <a href="#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Anfahrt</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none p-2">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Unser Angebot</a>
+                    <a href="./preise_new.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Infos</a>
+                    <a href="#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Anfahrt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacer for fixed header -->
+    <div class="pt-24 md:pt-32"></div>
+
+    <!-- Hero -->
+    <section class="relative">
+        <div class="container mx-auto px-4 py-8 md:py-12 lg:py-14">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">Unser Angebot</h1>
+                    <p class="text-gray-700 mb-3 text-sm sm:text-base">Bei Fahrschule Kompass findest du praxisnahe und moderne Ausbildungskurse – von der ersten Fahrstunde bis zur MPU-Beratung.</p>
+                    <p class="text-gray-700 mb-6 text-sm sm:text-base">Entdecke unsere Fahrschulklassen, Theorieunterricht und MPU-Beratung</p>
+                    <a href="#kontakt" class="inline-block bg-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition duration-200 font-medium text-sm sm:text-base">Jetzt anmelden</a>
+                </div>
+                <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-sm">
+                    <video 
+                        src="../images/unser-angebot_cover.webm" 
+                        class="w-full h-auto" 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                        preload="metadata"
+                        loading="eager">
+                        <p>Ihr Browser unterstützt das Video-Element nicht.</p>
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Fahrschulklassen -->
+    <section id="fahrschulklassen" class="py-10 bg-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Fahrschulklassen</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- BF17 -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">👨‍👩‍👦</div>
+                        <h3 class="text-lg font-semibold text-gray-900">BF17 – Begleitetes Fahren ab 17</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Starte deine Fahrausbildung frühzeitig und sicher mit dem Begleiteten Fahren ab 17 bei Fahrschule Kompass. Unsere kompetenten Fahrlehrer begleiten dich auf dem Weg zur eigenen Mobilität, damit du nicht nur die Prüfung bestehst, sondern auch ein verantwortungsbewusster Fahrer wirst.</p>
+                </div>
+                <!-- B -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">🚗</div>
+                        <h3 class="text-lg font-semibold text-gray-900">B – Pkw-Führerschein</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Dein Weg zur individuellen Freiheit beginnt hier! Fahrschule Kompass bietet dir eine moderne und praxisnahe Ausbildung für den Pkw-Führerschein der Klasse B. Erfahrene Fahrlehrer stehen bereit, um dich sicher durch den Verkehr zu führen.</p>
+                </div>
+                <!-- BE -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">🛻</div>
+                        <h3 class="text-lg font-semibold text-gray-900">BE – Anhängerführerschein</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Lerne das sichere Fahren mit Anhängern oder Wohnmobilen. Unsere praxisorientierte Ausbildung bereitet dich optimal auf das Fahren mit Anhänger vor, damit du auch im Alltag souverän unterwegs bist.</p>
+                </div>
+                <!-- B78 -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">🔄 🚗</div>
+                        <h3 class="text-lg font-semibold text-gray-900">B78 – Automatikführerschein</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Entdecke die Vorzüge des entspannten Fahrens mit dem Automatikführerschein der Klasse B78 bei Fahrschule Kompass. Lerne, wie einfach und bequem Autofahren sein kann, und starte deine Fahrausbildung ohne lästiges Schalten.</p>
+                </div>
+                <!-- B96 -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">🚚</div>
+                        <h3 class="text-lg font-semibold text-gray-900">B96 – Erweiterung Klasse B</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Erhalte die Berechtigung, größere Anhänger sicher zu ziehen. Unsere praxisnahen Fahrstunden bereiten dich optimal auf das Fahren mit Kombinationen bis zu 4.250 kg vor.</p>
+                </div>
+                <!-- B197 -->
+                <div class="group bg-card rounded-xl shadow-sm p-5 border border-accent/40 transition transform duration-200 hover:scale-105 hover:shadow-md">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <div class="text-3xl">⚙️🚗</div>
+                        <h3 class="text-lg font-semibold text-gray-900">B197 – Schaltkompetenz</h3>
+                    </div>
+                    <p class="text-gray-600 mt-2">Absolviere mindestens 10 Schalt-Pflichtfahrstunden und wechsle anschließend in den Automatikbetrieb, um deine Prüfung später erfolgreich abzulegen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theorie & MPU-Vorbereitung -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">Theorie & MPU-Vorbereitung</h2>
+        </div>
+    </section>
+
+    <!-- Theorieunterricht -->
+    <section id="theorie" class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="order-1">
+                    <button type="button" class="group block w-full focus:outline-none rounded-xl overflow-hidden border border-accent/40 shadow-sm" data-profile src="../images/theory.webp" aria-label="Theoriebild öffnen">
+                        <img src="../images/theory.webp" alt="Theorieunterricht" class="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" data-profile="../images/theory.webp">
+                    </button>
+                </div>
+                <div class="order-2">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 text-left">Theorie-Unterricht</h2>
+                    <p class="text-gray-700 mb-2">Die Theorie ist die Grundlage für sicheres Fahren. In unserem praxisnahen und unterhaltsamen Theorieunterricht vermitteln wir nicht nur das notwendige Wissen, sondern bereiten dich gezielt auf die Prüfung vor.</p>
+                    <p class="text-gray-700">Mit unserer Lern-App, die du direkt bei uns erwerben kannst, kannst du jederzeit optimal für die Theorieprüfung üben. Bei Fragen stehen wir dir jederzeit unterstützend zur Seite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MPU-Beratung -->
+    <section id="mpu" class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">MPU-Beratung</h2>
+                    <p class="text-gray-700 mb-2">Die MPU kann eine Herausforderung darstellen, doch wir begleiten dich Schritt für Schritt. Fahrschule Kompass bietet individuelle Beratung und gezielte Vorbereitung, damit du die MPU erfolgreich bestehst.</p>
+                    <p class="text-gray-700">Gemeinsam arbeiten wir daran, dass du deine Fahrerlaubnis sicher zurückerlangst.</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <button type="button" class="group block w-full focus:outline-none rounded-xl overflow-hidden border border-accent/40 shadow-sm" data-profile src="../images/mpu_beratung.webp" aria-label="MPU Bild öffnen">
+                        <img src="../images/mpu_beratung.webp" alt="MPU-Beratung" class="w-full h-64 md:h-72 object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer" data-profile="../images/mpu_beratung.webp">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 md:py-16 bg-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Häufig gestellte Fragen (FAQ)</h2>
+            <div class="max-w-4xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-all duration-300 flex justify-between items-center group">
+                        <span class="font-medium text-gray-900 group-hover:text-navbar transition-colors duration-300">Wie lange dauert die Fahrausbildung in der Fahrschule Kompass?</span>
+                        <span class="faq-icon text-accent text-xl transition-all duration-300 transform group-hover:scale-110">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 overflow-hidden">
+                        <div class="faq-content-inner">
+                            <p class="text-gray-700 leading-relaxed">Die Dauer der Fahrausbildung hängt von der gewählten Führerscheinklasse sowie deinem individuellen Lernfortschritt ab. In der Regel dauert die Ausbildung für die Klasse B etwa 3 bis 6 Monate. Dein Fahrlehrer erstellt gemeinsam mit dir einen individuellen Fahrplan, der sicherstellt, dass du optimal auf die theoretische und praktische Prüfung vorbereitet bist. So kannst du Schritt für Schritt deine Fahrkompetenzen aufbauen und selbstbewusst die Prüfung antreten.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-all duration-300 flex justify-between items-center group">
+                        <span class="font-medium text-gray-900 group-hover:text-navbar transition-colors duration-300">Wie oft kann ich die theoretische Prüfung wiederholen?</span>
+                        <span class="faq-icon text-accent text-xl transition-all duration-300 transform group-hover:scale-110">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 overflow-hidden">
+                        <div class="faq-content-inner">
+                            <p class="text-gray-700 leading-relaxed">Du kannst die theoretische Prüfung mehr als drei Mal wiederholen, falls du sie beim ersten Versuch nicht bestehst. Nach jedem nicht bestandenen Versuch musst du vor der nächsten Hauptprüfung einen Vortest absolvieren. Vor jeder Wiederholung ist es wichtig, sich ausreichend vorzubereiten, um deine Erfolgschancen zu maximieren. Wir stehen dir dabei mit zusätzlichen Lernmaterialien, individueller Beratung und Unterstützung zur Seite, damit du beim nächsten Versuch erfolgreich bist.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-all duration-300 flex justify-between items-center group">
+                        <span class="font-medium text-gray-900 group-hover:text-navbar transition-colors duration-300">Wie oft kann ich Fahrstunden nehmen?</span>
+                        <span class="faq-icon text-accent text-xl transition-all duration-300 transform group-hover:scale-110">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 overflow-hidden">
+                        <div class="faq-content-inner">
+                            <p class="text-gray-700 leading-relaxed">Die Häufigkeit der Fahrstunden richtet sich nach deiner eigenen Verfügbarkeit sowie deinem individuellen Lernfortschritt. Wir empfehlen regelmäßige Fahrstunden, da sie eine kontinuierliche Verbesserung deiner Fahrfähigkeiten gewährleisten. Dein Fahrlehrer erstellt zusammen mit dir einen Fahrplan, der auf deinen Zeitplan zugeschnitten ist, sodass du effizient lernen und dich optimal auf die Prüfung vorbereiten kannst.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-card border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left bg-white hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-all duration-300 flex justify-between items-center group">
+                        <span class="font-medium text-gray-900 group-hover:text-navbar transition-colors duration-300">Unterstützt die Fahrschule Kompass auch bei der Vorbereitung auf die MPU?</span>
+                        <span class="faq-icon text-accent text-xl transition-all duration-300 transform group-hover:scale-110">+</span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-5 overflow-hidden">
+                        <div class="faq-content-inner">
+                            <p class="text-gray-700 leading-relaxed">Ja, wir bieten umfassende Unterstützung bei der Vorbereitung auf die Medizinisch-Psychologische Untersuchung (MPU). Unsere erfahrenen Berater begleiten dich individuell und zielgerichtet, damit du die MPU erfolgreich meisterst. Gemeinsam arbeiten wir daran, dass du deine Fahrerlaubnis sicher zurückerlangst und wieder selbstbewusst am Straßenverkehr teilnehmen kannst.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt CTA (anchor target) -->
+    <section id="kontakt" class="py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Interesse?</h2>
+            <p class="text-gray-700 mb-6 text-sm sm:text-base">Fachgerechte Ausbildungen und transparente Preise</p>
+            <p class="text-gray-700 mb-4 text-sm sm:text-base">Kommt gerne persönlich vorbei, lasst euch beraten oder ruft an.</p>
+            <p class="text-gray-700 mb-6 text-sm sm:text-base">Alternativ könnt ihr auch eine E-Mail schreiben.</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a href="tel:04030924460" class="flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-200">
+                    <i class="fas fa-phone"></i>
+                    <span>040 – 30924460</span>
+                </a>
+                <a href="mailto:info@fahrschule-kompass.de" class="flex items-center space-x-2 bg-gray-100 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition duration-200">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@fahrschule-kompass.de</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer border-t border-footer py-12">
+        <div class="container mx-auto px-4">
+            <!-- Brand Section -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-8 w-auto" loading="lazy" decoding="async">
+                    <span class="text-xl font-bold text-gray-900">Fahrschule Kompass</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                    Dein Weg zum Führerschein beginnt hier.
+                </p>
+            </div>
+
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Navigation -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
+                    <div class="space-y-2">
+                        <a href="../index.html" class="block text-gray-600 hover:text-navbar transition duration-200">Home</a>
+                        <a href="./preise_new.html" class="block text-gray-600 hover:text-navbar transition duration-200">Preise</a>
+                        <a href="./anfahrt.html" class="block text-gray-600 hover:text-navbar transition duration-200">Anfahrt</a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                    <div class="space-y-2">
+                        <a href="https://www.instagram.com/fahrschule_kompass/" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-instagram text-lg"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/FahrschuleKompass" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=4901634696460&text&type=phone_number&app_absent=0" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rechtliches -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Rechtliches</h3>
+                    <div class="space-y-2">
+                        <a href="./impressum.html" class="block text-gray-600 hover:text-navbar transition duration-200">Impressum</a>
+                        <a href="./datenschutz.html" class="block text-gray-600 hover:text-navbar transition duration-200">Datenschutz</a>
+                    </div>
+                </div>
+
+                <!-- AGB -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">AGB</h3>
+                    <div class="space-y-2">
+                        <a href="./agb.html" class="block text-gray-600 hover:text-navbar transition duration-200">Allgemeine Geschäftsbedingungen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-footer">
+                <p class="text-center text-gray-600 text-xs pt-2">
+                    © 2025 Fahrschule Kompass – Alle Rechte vorbehalten | Developed by <a href="https://asishkghosh.github.io/ghosh-dossier/" target="_blank" rel="noopener noreferrer">Asish Kumar Ghosh</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-75 flex items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <img id="image-modal-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg">
+            <button id="image-modal-close" class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50 p-4 md:p-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">🍪 Cookie-Einstellungen</h3>
+                    <p class="text-sm text-gray-600 mb-2">
+                        Wir verwenden Cookies, um dir die beste Erfahrung auf unserer Website zu bieten. 
+                        Durch die Nutzung unserer Website stimmst du der Verwendung von Cookies zu.
+                    </p>
+                    <p class="text-xs text-gray-500">
+                        Weitere Informationen findest du in unserer 
+                        <a href="./datenschutz.html" class="text-accent hover:underline">Datenschutzerklärung</a>.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <button id="cookie-accept-all" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition duration-200 text-sm font-medium">
+                        Alle akzeptieren
+                    </button>
+                    <button id="cookie-accept-necessary" class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition duration-200 text-sm font-medium">
+                        Nur notwendige
+                    </button>
+                    <button id="cookie-settings" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition duration-200 text-sm font-medium">
+                        Einstellungen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
+

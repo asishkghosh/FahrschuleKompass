@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anfahrt – Fahrschule Kompass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../images/logo-black.webp" type="image/webp">
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <a href="../index.html" class="flex items-center space-x-2 hover:opacity-80 transition duration-200">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-10 md:h-12 w-auto" loading="eager" decoding="async">
+                    <span class="text-lg md:text-xl font-bold text-navbar hidden sm:block">FAHRSCHULE KOMPASS</span>
+                    <span class="text-sm font-bold text-navbar sm:hidden">FAHRSCHULE KOMPASS</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-6 xl:space-x-8">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Unser Angebot</a>
+                    <a href="./preise_new.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Infos</a>
+                    <a href="./angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200">Anfahrt</a>
+                </nav>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="lg:hidden text-gray-700 focus:outline-none p-2">
+                    <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                    <svg id="close-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="../index.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Home</a>
+                    <a href="./angebot.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Unser Angebot</a>
+                    <a href="./preise_new.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Preise</a>
+                    <a href="./infos.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Infos</a>
+                    <a href="./angebot.html#faq" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">FAQ</a>
+                    <a href="./anfahrt.html" class="text-navbar font-bold hover:text-navbar/80 transition duration-200 py-2">Anfahrt</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="pt-24 md:pt-32"></div>
+
+    <!-- Hero Section -->
+    <section class="py-12 md:py-16 lg:py-20 bg-accent/10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unser Standort</h1>
+                    <h2 class="text-lg sm:text-xl md:text-2xl text-gray-700 mb-6">So findest du uns</h2>
+                    <div class="space-y-4">
+                        <p class="text-gray-700 text-sm sm:text-base">Unsere Fahrschule liegt zentral und ist gut erreichbar. Hier findest du alle Informationen, um uns zu finden.</p>
+                        <p class="text-gray-700 text-sm sm:text-base">Wir sind immer für dich da, um deine Fragen zu beantworten und dich auf dem Weg zum Führerschein zu begleiten.</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-sm">
+                    <img src="../images/anfahrt_team.webp" alt="Fahrschule Kompass Team" class="w-full h-auto object-cover max-w-md mx-auto lg:max-w-none">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öffnungszeiten & Adresse + Google Maps -->
+    <section class="py-12 md:py-16 bg-section">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Öffnungszeiten & Adresse Card -->
+                <div class="w-full lg:w-1/2 bg-card border border-accent/20 rounded-xl shadow-sm p-8">
+                    <div class="flex items-center mb-6">
+                        <span class="text-2xl mr-3">📍</span>
+                        <h2 class="text-2xl font-bold text-gray-900">Öffnungszeiten & Adresse</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-semibold text-gray-900 mb-2">Fahrschule Kompass</h3>
+                            <p class="text-gray-700">Eißendorfer Str. 27<br>21073 Hamburg, Deutschland</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <h4 class="font-semibold text-gray-900 mb-2">Öffnungszeiten:</h4>
+                            <p class="text-gray-700">Mo.–Do.: 14:30 – 18:00 Uhr</p>
+                            <p class="text-gray-700">Fr.    : 13:00 – 17:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Card -->
+                <div class="w-full lg:w-1/2 bg-card border border-accent/20 rounded-xl shadow-sm overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Standort</h2>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.418447292446!2d9.982145315894436!3d53.45405998001575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18f0f81f4e51d%3A0x6f7d7e7e7e7e7e7e!2sEi%C3%9Fendorfer%20Str.%2027%2C%2021073%20Hamburg!5e0!3m2!1sde!2sde!4v1650000000000!5m2!1sde!2sde" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg"></iframe>
+                        <div class="mt-4">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Eißendorfer+Str.+27,+21073+Hamburg" 
+                               target="_blank" 
+                               class="inline-block bg-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition duration-200 font-medium">
+                                Route planen
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Kontakt</h2>
+            <p class="text-gray-700 mb-6 text-sm sm:text-base">Wir freuen uns auf dich!</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
+                <a href="tel:04030924460" class="flex items-center space-x-2 bg-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition duration-200">
+                    <i class="fas fa-phone"></i>
+                    <span>040 – 30924460</span>
+                </a>
+                <a href="mailto:info@fahrschule-kompass.de" class="flex items-center space-x-2 bg-gray-100 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-200 transition duration-200">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@fahrschule-kompass.de</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-footer border-t border-footer py-12">
+        <div class="container mx-auto px-4">
+            <!-- Brand Section -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center space-x-2 mb-2">
+                    <img src="../images/logo-black.webp" alt="Fahrschule Kompass Logo" class="h-8 w-auto" loading="lazy" decoding="async">
+                    <span class="text-xl font-bold text-gray-900">Fahrschule Kompass</span>
+                </div>
+                <p class="text-gray-600 text-sm">
+                    Dein Weg zum Führerschein beginnt hier.
+                </p>
+            </div>
+
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <!-- Navigation -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Quick Navigation</h3>
+                    <div class="space-y-2">
+                        <a href="../index.html" class="block text-gray-600 hover:text-navbar transition duration-200">Home</a>
+                        <a href="./angebot.html" class="block text-gray-600 hover:text-navbar transition duration-200">Unser Angebot</a>
+                        <a href="./preise_new.html" class="block text-gray-600 hover:text-navbar transition duration-200">Preise</a>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Folge uns</h3>
+                    <div class="space-y-2">
+                        <a href="https://www.instagram.com/fahrschule_kompass/" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-instagram text-lg"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/FahrschuleKompass" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://api.whatsapp.com/send/?phone=4901634696460&text&type=phone_number&app_absent=0" target="_blank" class="flex items-center space-x-2 text-gray-600 hover:text-navbar transition duration-200">
+                            <i class="fab fa-whatsapp text-lg"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Rechtliches -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Rechtliches</h3>
+                    <div class="space-y-2">
+                        <a href="./impressum.html" class="block text-gray-600 hover:text-navbar transition duration-200">Impressum</a>
+                        <a href="./datenschutz.html" class="block text-gray-600 hover:text-navbar transition duration-200">Datenschutz</a>
+                    </div>
+                </div>
+
+                <!-- AGB -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">AGB</h3>
+                    <div class="space-y-2">
+                        <a href="./agb.html" class="block text-gray-600 hover:text-navbar transition duration-200">Allgemeine Geschäftsbedingungen</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-footer">
+                <p class="text-center text-gray-600 text-xs pt-2">
+                    © 2025 Fahrschule Kompass – Alle Rechte vorbehalten | Developed by <a href="https://asishkghosh.github.io/ghosh-dossier/" target="_blank" rel="noopener noreferrer">Asish Kumar Ghosh</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+</body>
+</html>
+
